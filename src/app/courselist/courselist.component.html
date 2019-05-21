@@ -1,0 +1,19 @@
+<div align="center">
+    <h2> Course List</h2>
+     <table style="width:400px">
+       <tr>
+         <th>Course ID</th>
+         <th>Name</th>
+         <th>Description</th>
+         <th>Price (AED)</th>
+       </tr>
+  
+        <tr *ngFor="let course of courselist">
+            <td>{{course.courseId}}</td>
+            <td>{{course.name}}</td>
+            <td>{{course.description}}</td>
+            <td>1500.00</td>
+        </tr>
+
+     </table>
+  </div>
