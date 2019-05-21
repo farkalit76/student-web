@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CourselistComponent } from './courselist/courselist.component';
 import { StudentlistComponent } from './studentlist/studentlist.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StudentlistComponent } from './studentlist/studentlist.component';
     LoginComponent,
     HomeComponent,
     CourselistComponent,
-    StudentlistComponent
+    StudentlistComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
