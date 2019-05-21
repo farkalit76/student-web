@@ -1,11 +1,10 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import {Observable, throwError} from 'rxjs';
-import { Login } from './login';
 import { FormGroup, FormControl } from '@angular/forms';
-import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { LoginResponse } from './loginResponse';
 import { RestApiStudentService } from '../shared/rest-api-student.service';
+import { JwtSessionService } from '../shared/jwtSessionService';
 
 
 @Component({
@@ -27,8 +26,8 @@ export class LoginComponent implements OnInit {
     password: new FormControl()
  });
 
-  constructor(public restApi: RestApiStudentService, 
-    public router: Router) {
+  constructor(public restApi: RestApiStudentService,  
+    public router: Router, public sessionService: JwtSessionService) {
   }
 
   ngOnInit() {
@@ -52,8 +51,10 @@ export class LoginComponent implements OnInit {
       "password": this.loginForm.value.password
     }
     
-    this.restApi.studentAuth(authData).subscribe((data: {}) => {
+    this.restApi.studentAuth(authData).subscribe((data: LoginResponse) => {
       console.log('auth student data:'+data);
+      this.sessionService.setAccessToken(data);
+      //localStorage.setItem("ACCESS_TOKEN", data.accessToken);
       this.router.navigate(['/courselist'])
     })
   }

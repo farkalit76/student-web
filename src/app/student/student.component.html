@@ -1,6 +1,6 @@
 <div align="center">
     <h2>Enter the Student details</h2>
-    <form method="POST" #myform="ngForm" (ngSubmit)="registerStd(myform)">
+    <form [formGroup]="studentForm" (ngSubmit)="createStudent()" >
         <div>
             <p>
               <label for="roles">Role</label>
@@ -10,19 +10,19 @@
             </p>
           </div>
       <div>
-        <p><input type="text" placeholder="Name" name="name" size="40" maxlength="45" /></p>
+        <p><input type="text" placeholder="Name" formControlName="name" size="40" maxlength="45" /></p>
       </div>
       <div>
-          <p><input type="text" placeholder="Username" name="username" size="40" maxlength="45" /></p>
+          <p><input type="text" placeholder="Username" formControlName="username" size="40" maxlength="45" /></p>
       </div>
       <div>
-          <p><input type="text" placeholder="Email" name="email" size="40" maxlength="45" /></p>
+          <p><input type="text" placeholder="Email" formControlName="email" size="40" maxlength="45" /></p>
       </div>
       <div>
-          <p><input type="password" placeholder="Password" name="password" size="40" maxlength="45" /></p>
+          <p><input type="password" placeholder="Password" formControlName="password" size="40" maxlength="45" /></p>
       </div>
       <div>
-          <p><input type="password" placeholder="Confirm Password" name="confpassword" size="40" maxlength="45" /></p>
+          <p><input type="password" placeholder="Confirm Password" formControlName="confirmPassword" size="40" maxlength="45" /></p>
       </div>
       <div>
           <input type="submit" value="Create Student" style="width:300px;"/>

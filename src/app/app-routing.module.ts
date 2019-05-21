@@ -5,11 +5,13 @@ import { CourseComponent }      from './course/course.component';
 import { LoginComponent }      from './login/login.component';
 import { HomeComponent }      from './home/home.component';
 import { CourselistComponent } from './courselist/courselist.component';
+import { StudentlistComponent } from './studentlist/studentlist.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'student', component: StudentComponent },
+  { path: 'studentlist', component: StudentlistComponent },
   { path: 'course', component: CourseComponent },
   { path: 'courselist', component: CourselistComponent }
 ];

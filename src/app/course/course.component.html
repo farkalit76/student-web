@@ -1,14 +1,14 @@
 <div align="center">
     <h2>Enter the Course details</h2>
-    <form method="POST">
+    <form [formGroup]="courseForm" (ngSubmit)="courseSave()" >
       <div>
-        <p><input type="text" placeholder="Name" name="name" size="40" maxlength="45" /></p>
+        <p><input type="text" placeholder="Name" formControlName="name" size="40" maxlength="45" required /></p>
       </div>
       <div>
-          <p><input type="text" placeholder="Description" name="description" size="40" maxlength="45" /></p>
+          <p><input type="text" placeholder="Description" formControlName="description" size="40" maxlength="45" /></p>
       </div>
       <div>
-          <p><input type="text" placeholder="Price" name="price" size="40" maxlength="45" /></p>
+          <p><input type="text" placeholder="Price" formControlName="price" size="40" maxlength="45" /></p>
       </div>
       <div>
           <input type="submit" value="Create Course" style="width:300px;"/>

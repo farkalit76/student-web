@@ -14,6 +14,7 @@ import { CourseComponent } from './course/course.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CourselistComponent } from './courselist/courselist.component';
+import { StudentlistComponent } from './studentlist/studentlist.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CourselistComponent } from './courselist/courselist.component';
     CourseComponent,
     LoginComponent,
     HomeComponent,
-    CourselistComponent
+    CourselistComponent,
+    StudentlistComponent
   ],
   imports: [
     BrowserModule,

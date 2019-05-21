@@ -1,0 +1,20 @@
+<div align="center">
+  <h2> Student List</h2>
+   <table style="width:400px">
+     <tr>
+       <th>Student ID</th>
+       <th>Name</th>
+       <th>User Name</th>
+       <th>Email</th>
+     </tr>
+
+      <tr *ngFor="let student of studentlist">
+          <td>{{student.studId}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.username}}</td>
+          <td>{{student.email}}</td>
+          <!--<td>{{student.password}}</td>-->
+      </tr>
+
+   </table>
+</div>
