@@ -16,7 +16,7 @@ export class StudentlistComponent implements OnInit {
   ngOnInit() {
       console.log('student list loading...');
       this.restApi.getStudents().subscribe((data: {}) => {
-        console.log('display all students:'+data);
+        //console.log('display all students:'+data);
         this.studentlist = data;
       })
   }

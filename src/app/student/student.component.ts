@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { RestApiStudentService } from '../shared/rest-api-student.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-student',
@@ -21,7 +21,7 @@ export class StudentComponent implements OnInit {
   })
 
   constructor(public restApi: RestApiStudentService,  
-    public router: Router) { }
+    public router: Router, private route: ActivatedRoute) { }
   
   ngOnInit() {
   }
@@ -44,7 +44,7 @@ export class StudentComponent implements OnInit {
     this.restApi.createStudent(studentData).subscribe((data: {}) => {
       console.log('student saved data:'+data);
       //localStorage.setItem("ACCESS_TOKEN", data.accessToken);
-      this.router.navigate(['/courselist'])
+      this.router.navigate(['../studentlist'], {relativeTo: this.route})
     })
   }
 }

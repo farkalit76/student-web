@@ -55,7 +55,8 @@ export class LoginComponent implements OnInit {
       console.log('auth student data:'+data);
       this.sessionService.setAccessToken(data);
       //localStorage.setItem("ACCESS_TOKEN", data.accessToken);
-      this.router.navigate(['/courselist'])
+      //this.router.navigate(['/courselist'])
+      this.router.navigate(['/home']);
     })
   }
 

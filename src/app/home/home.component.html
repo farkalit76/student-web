@@ -1,5 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div align="center">Home Page</div>
+<div align="center">
+  <h1>
+    Welcome to Stduent Management Dashboard
+  </h1>
+  <p>
+      <!-- <a routerLink="/home">Home</a>&nbsp;&nbsp;
+      <a routerLink="/login">Login</a>&nbsp;&nbsp; -->
+    <button (click)= "homePage()"> Home</button>&nbsp;&nbsp;
+    <button (click)= "showStudentList()"> Student List</button>&nbsp;&nbsp;
+    <button (click)= "createStudent()"> Create Student</button>&nbsp;&nbsp;
+    <button (click)= "showCourseList()"> Course List</button>&nbsp;&nbsp;
+    <button (click)= "createCourse()"> Create Course</button>&nbsp;&nbsp;
+    <button (click)= "logoutPage()"> Logout</button>&nbsp;&nbsp;
+  </p>
+</div>
+
+  <router-outlet></router-outlet>
 
   
   

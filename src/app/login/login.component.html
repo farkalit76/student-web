@@ -1,20 +1,75 @@
-<div align="center">
-    <h2>Enter Username or Email Id</h2>
-
-    <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()" >
-      <div>
-        <p><input type="text"  formControlName="username" placeholder="Username" size="40" maxlength="45" required /></p>
+<!-- Home page -->
+<div class="left-panel">
+    <div>
+        <div class="cb-panel-info ">
+              <h2 class="cb-panel-title">
+              The Benefits of My School
+              </h2>
+              <p class="cb-panel-desc">
+              High school students across the country and around the world take AP courses and exams to challenge themselves, explore their interests, and earn college credit and placement. AP can give you:
+              </p>
+          </div>
+          <div class="cb-panel-content">
+        <div class="">
+          <div class="row">
+                          
+                              <div>
+          <div class="cb-key-benefit">
+      <div class="cb-block-img">
+        <span class="cb-school cb-glyph-multi"></span>
       </div>
-      <div>OR</div>
-      <div>
-          <p><input type="text"  formControlName="email" placeholder="Email Id" size="40" maxlength="45"  required/></p>
+      <h3 class="cb-block-title">
+                <div>A Head Start in High School</div>
+          </h3>
+      <div class="cb-block-desc">
+      <p>Get a taste of college-level work while developing the academic skills you’ll need for college success. You might even discover your career path.</p>
       </div>
-      <div>
-          <p><input type="password"  formControlName="password" placeholder="Password" size="40" maxlength="45" required/></p>
       </div>
-      <div>
-          <button type="submit" value="Login" style="width:300px;">Login</button>
       </div>
-    </form>
+                            <div>
+          <div class="cb-key-benefit">
+      <div class="cb-block-img">
+        <span class="cb-graduate-pro-school cb-glyph-multi"></span>
+      </div>
+      <h3 class="cb-block-title">
+                <div>An Edge in College</div>
+          </h3>
+      <div class="cb-block-desc">
+      <p>Your AP Exam scores can earn you college credit before you set foot on campus—and&nbsp;let you skip introductory college courses.</p>
+      </div>
+      </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="cb-panel-cta ">
+          <div><a href="#" class="btn btn-sm btn-secondary" data-cbtrack-promo="" data-cbtrack-label="" data-kiwi-promo-link="" data-kiwi-promo-view="">Learn more</a></div>
+      </div>
   </div>
-  
+
+</div>
+
+<!-- login page -->
+<div class="right-panel">
+    <div align="center">
+        <h2>Enter Username or Email Id</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()" >
+          <div>
+            <p><input type="text"  formControlName="username" placeholder="Username" size="40" maxlength="45" required /></p>
+          </div>
+          <div>OR</div>
+          <div>
+              <p><input type="text"  formControlName="email" placeholder="Email Id" size="40" maxlength="45"  required/></p>
+          </div>
+          <div>
+              <p><input type="password"  formControlName="password" placeholder="Password" size="40" maxlength="45" required/></p>
+          </div>
+          <div>
+              <button type="submit" value="Login" style="width:300px;">Login</button>
+          </div>
+        </form>
+      </div>
+
+</div>
+

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { RestApiStudentService } from '../shared/rest-api-student.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-course',
@@ -17,7 +17,7 @@ export class CourseComponent implements OnInit {
  });
 
   constructor(public restApi: RestApiStudentService, 
-    public router: Router) {
+    public router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -34,7 +34,7 @@ export class CourseComponent implements OnInit {
     
     this.restApi.createCourse(courseData).subscribe((data: {}) => {
       console.log('course data:'+data);
-      this.router.navigate(['/courselist'])
+      this.router.navigate(['../courselist'], {relativeTo: this.route})
     })
   }
 }

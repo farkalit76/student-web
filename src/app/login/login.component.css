@@ -5,3 +5,17 @@ h1  {
     margin-bottom: 5px;
     text-decoration: underline;
  }
+ .left-panel
+ {        
+     background-color:#ccc;
+     width:60%;
+     height:500px;
+     float:left;            
+ }
+
+ .right-panel{
+    background-color:Gray;
+    width:40%;
+    height:500px;
+    float:left;
+ }
