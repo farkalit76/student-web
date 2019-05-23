@@ -41,11 +41,12 @@ export class RestApiStudentService {
      * @param authData 
      */
     studentAuthenticate(authData){
-      return this.http.post(this.apiURL+ '/api/auth/login', JSON.stringify(authData), this.httpOptions)
+      return this.http.post<LoginResponse>(this.apiURL+ '/api/auth/login', JSON.stringify(authData), this.httpOptions)
       .subscribe(
         (res)=>{
           console.log('success');
           console.log(res);
+          return res;
         },
           err=>{
           console.log(" Error..");
@@ -87,7 +88,13 @@ export class RestApiStudentService {
      * HttpClient API get() method => Fetch course list
      */
     getCourses(): Observable<Course> {
-      return this.http.get<Course>(this.apiURL + '/api/courses/view')
+      var httpTokenOptions = {
+        headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        "Authorization":'Bearer '+ this.sessionService.getAccessToken()
+        })
+      } 
+      return this.http.get<Course>(this.apiURL + '/api/courses/view', httpTokenOptions)
       .pipe(
           retry(1),
           catchError(this.handleError)
