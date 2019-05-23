@@ -56,14 +56,14 @@
         <h2>Enter Username or Email Id</h2>
         <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()" >
           <div>
-            <p><input type="text"  formControlName="username" placeholder="Username"  maxlength="45" required /></p>
+            <p><input type="text"  formControlName="username" placeholder="Username"  maxlength="45" /></p>
           </div>
           <div>OR</div>
           <div>
-              <p><input type="text"  formControlName="email" placeholder="Email Id"  maxlength="45"  required/></p>
+              <p><input type="text"  formControlName="email" placeholder="Email Id"  maxlength="45" /></p>
           </div>
           <div>
-              <p><input type="password"  formControlName="password" placeholder="Password"  maxlength="45" required/></p>
+              <p><input type="password"  formControlName="password" placeholder="Password"  maxlength="45"/></p>
           </div>
           <div>
               <button type="submit" value="Login" style="width:170px;">Login</button>
